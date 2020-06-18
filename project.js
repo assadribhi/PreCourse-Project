@@ -168,17 +168,15 @@ abbreviate("Michael", "Singer");
  */
 function isUpperCase(string) {
   // Your code here
-  let res = 0;
-  let ans = 0;
+  let res = [];
   for (let i = 0; i < string.length; i++) {
     if (string[i] === string[i].toUpperCase()) {
-      ans = res;
+      res.push(i);
     }
-    ans = res - res;
   }
-  return console.log(res === ans);
+  return res.length === string.length;
 }
-isUpperCase("DFsF");
+isUpperCase("DFDF");
 /**
  * elementInArray(numbers, x):
  * - receives an array of numbers, and a number `x`.
@@ -213,7 +211,13 @@ elementInArray([5, 6, 7], 8);
  */
 function reverseString(string) {
   // Your code here
+  string = string.split("");
+  string = string.reverse();
+  string = string.join("");
+
+  return string;
 }
+reverseString("CODED");
 
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 // console.log(characterCount("Character Count is clever", "c"));
